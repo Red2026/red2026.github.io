@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="base.css">
+<!-- 设置网页背景为图片-->
+
+   
+    <style>
+        body {
+            background-image: url('./wallhaven-wyv7yx.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+    </style>    
 <head>
     <meta charset="UTF-8">
     <title>red2026.github.io</title>
-    <style>
-        body{
-            padding-right: 50px;
-            padding-left: 50px;
-        }
+    
 
-
-        a {font-size: 24px;}
-
-        @media screen and (max-width: 1500px) {
-            h2 {font-size: 70px;}
-            h1 {font-size: 90px;}
-            title {font-size: 90px;}
-            li {font-size: 70px;}
-            p {font-size: 70px;}
-            a {font-size: 70px;}
-        }
-    </style>
 </head>
-<body>
+<body>  
+    <div class="navbar">
+        <h1>
+            <a href="index.html">HOME</a>&nbsp;
+            <a href="plan.html">待办事项</a>&nbsp;
+            <a href="https://red2026.github.io/diary/" target="_blank">大事件</a>&nbsp;
+            <a href="https://x.com/Red40602025" target="_blank">Twitter</a>&nbsp;
+            <a href="https://steamcommunity.com/profiles/76561199230499717/" target="_blank">steamAccount</a>
+    
 
-    <h1>
-        <strong>red2026.github.io</strong>
-    </h1>
-    <hr>
-    <img src="微信图片_20240704220700.jpg" title="我的样子" width="350">
-    <ul>
-        <li>
-            <h2>
-                <a href="plan.html" target="_blank">待办事项</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
-                <a href="https://red2026.github.io/diary/" target="_blank">大事件</a>
-            </h2>
-        </li>
-        <li>
-            <h2>
-                <a href="https://x.com/Red40602025" target="_blank">My Twitter</a><br>
-                <a href="https://steamcommunity.com/profiles/76561199230499717/" target="_blank">My steam account</a> (for playing csgo and gtaol)
-            </h2>
-        </li>
-        <h2 style="color: orangered">
-            (don't hack my account thankyou)
-        </h2>
-    </ul>
+        </h1>
+        
+    </div>  
+    <br>
+    <br>
+   
+    <div class = "search">
+        <h3>
+            <!-- 创建一个文本输入框，用于触发谷歌搜索功能 -->
+            <input type="text" id="myInput" placeholder="放一个谷歌搜索在这里" title="Type in a name">
+        
+            <!-- 创建一个搜索按钮，并设置大小，用于触发搜索功能 -->
+            <input type="button" value="Search" onclick="googleSearch()">
+            </input>
+            
+            <!-- 创建一个搜索函数，但按下Search按钮时，跳转到谷歌搜索结果页面 -->
+            <script>
+                function googleSearch() {
+                    window.open("https://www.google.com/search?q=" + document.getElementById("myInput").value);
+                }
+            </script>
+        </h3>
+    </div>    
 
-    <br>
+        
+   
+    
 
-
-    <h2>
-        网站开发中...<br>&nbsp;&nbsp;&nbsp;&nbsp;&#8201;|<br>&nbsp;&nbsp;&nbsp;&nbsp;&#8201;|<br>&nbsp;&nbsp;&nbsp;&nbsp;V
-    </h2>
+    
+  
+    
+   
     <br>
     <br>
     <br>
@@ -81,20 +85,12 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <h6>
-        <a href="ricksroll.html">一个神秘的按钮</a>
-    </h6>
+    <div class = "ricksroll">
+        <h6>
+            
+            <button onclick="window.open('ricksroll.html')">一个神秘的按钮</button>
+        </h6>
+    </div>    
 
 
 </body>
