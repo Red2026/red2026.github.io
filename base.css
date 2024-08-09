@@ -7,17 +7,17 @@
     display: inline-block; /* 如果使用div，需要设置为inline-block使其表现得像一个按钮 */
     padding: 8px 15px; /* 垂直和水平内边距 */
     border-radius: 10px; /* 圆角半径 */
-    color: white; /* 文字颜色 */
+    color: rgb(255, 255, 255); /* 文字颜色 */
     border: none; /* 移除边框 */
     cursor: pointer; /* 鼠标悬停时变为手型 */
     font-size: 16px; /* 字体大小 */
     text-align: center; /* 文本居中 */
     transition: background-color 0.3s ease; /* 平滑过渡效果 */
-  }
+}
   
   .rounded-button:hover {
     background-color: #000000; /* 鼠标悬停时改变背景颜色 */
-  }
+}
 
 /* 导航栏样式设置 */
 .navbar {
@@ -32,7 +32,7 @@
     width: 100%;
     /* 设置背景色和文字颜色，提高可读性 */
     background-color: #333;
-    color: white;
+    color: rgb(255, 255, 255);
     /* 为导航栏内部上下添加10px的内边距，左右默认，以适应文本 */
     padding: 10px 0;
     /* 设置较高的z-index值，确保导航栏在其他元素之上 */
@@ -41,25 +41,26 @@
     text-indent: 40px;
     /* 设置导航栏的高度 */
     height: 90px;
-
 }
+
+  /* 导航栏内的元素 */
+  .navbar a {
+    color: rgb(236, 236, 236);
+    text-decoration: none;
+}
+
 .container {
     max-width: calc(100% - 120px); /* 减去两边的总内边距 */
     margin: 0 auto; /* 自动居中 */
     padding: 60px; /* 左右内边距 */
-  }
+}
   
   /* 示例内容 */
   .content {
     background-color: #f4f4f4;
     padding: 20px;
-  }
+    }
 
-  /* 导航栏内的元素 */
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
 
 /* 定义body的基本布局和样式 */
 body {

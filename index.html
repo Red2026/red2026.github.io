@@ -36,13 +36,36 @@
     <br>
    
     <div class = "search">
-        <h3>
+        <h4>
             <!-- 创建一个文本输入框，用于触发谷歌搜索功能 -->
-            <input type="text" id="myInput" placeholder="放一个谷歌搜索在这里" title="Type in a name">
+            <input type="text" id="myInput" placeholder="放一个Google在这里" title="Type in a name">
+            
+            <!-- 当用户点击文本输入框时，placeholder文本消失-->
+            <script>
+                // 创建一个文本输入框，并设置placeholder文本
+                var input = document.getElementById("myInput");
+                // 创建一个事件监听器，当用户点击文本输入框时，placeholder文本消失
+                input.addEventListener("click", function() {
+                    this.placeholder = "";
+                });
+            </script>
+
+            <!-- 设置文本输入框的圆角弧度--> 
+            <style>
+                #myInput {
+                    border-radius: 10px;
+                }
+            </style>
         
             <!-- 创建一个搜索按钮，并设置大小，用于触发搜索功能 -->
             <input type="button" value="Search" onclick="googleSearch()">
             </input>
+            <!-- 设置搜索按钮的圆角弧度-->
+            <style>
+                input[type=button] {
+                    border-radius: 10px;
+                }
+            </style>
             
             <!-- 创建一个搜索函数，但按下Search按钮时，跳转到谷歌搜索结果页面 -->
             <script>
@@ -52,15 +75,6 @@
             </script>
         </h3>
     </div>    
-
-        
-   
-    
-
-    
-  
-    
-   
     <br>
     <br>
     <br>
@@ -82,16 +96,5 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <div class = "ricksroll">
-        <h6>
-            
-            <button onclick="window.open('ricksroll.html')">一个神秘的按钮</button>
-        </h6>
-    </div>    
-
-
 </body>
 </html>
