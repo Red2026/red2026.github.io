@@ -1,3 +1,8 @@
+.plan-text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
 .search {
     /* 设置搜索框的边距 */
     padding: 30px;
@@ -41,6 +46,8 @@
     text-indent: 40px;
     /* 设置导航栏的高度 */
     height: 90px;
+    
+   
 }
 
   /* 导航栏内的元素 */
