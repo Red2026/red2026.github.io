@@ -1,180 +1,53 @@
-.plan-text {
-    font-family: 'Courier New', Courier, monospace;
+/* 重置body的默认样式，移除外边距和内边距，但为了给导航栏预留空间，设置顶部外边距 */
+body{
+    margin:0px;
+    padding: 0px;
 }
 
 
-.search {
-    /* 设置搜索框的边距 */
-    padding: 30px;
-}
-
-.ricksroll {
-    display: inline-block; /* 如果使用div，需要设置为inline-block使其表现得像一个按钮 */
-    padding: 8px 15px; /* 垂直和水平内边距 */
-    border-radius: 10px; /* 圆角半径 */
-    color: rgb(255, 255, 255); /* 文字颜色 */
-    border: none; /* 移除边框 */
-    cursor: pointer; /* 鼠标悬停时变为手型 */
-    font-size: 16px; /* 字体大小 */
-    text-align: center; /* 文本居中 */
-    transition: background-color 0.3s ease; /* 平滑过渡效果 */
-}
-  
-  .rounded-button:hover {
-    background-color: #000000; /* 鼠标悬停时改变背景颜色 */
-}
-
-/* 导航栏样式设置 */
-.navbar {
-    /* 重置默认的边距和内边距，避免出现意外的布局效果 */
-    margin: 0;
-    padding: 0;
-    /* 固定定位，使导航栏在页面滚动时保持在顶部 */
+/* 导航栏样式，使用弹性布局，固定在页面顶部，全宽，深色背景，自动溢出 */
+nav{
+    display: flex;
     position: fixed;
-    top: 0;
-    left: 0;
-    /* 宽度设置为100%，确保导航栏横跨整个屏幕 */
+    top:0;
     width: 100%;
-    /* 设置背景色和文字颜色，提高可读性 */
-    background-color: #333;
-    color: rgb(255, 255, 255);
-    /* 为导航栏内部上下添加10px的内边距，左右默认，以适应文本 */
-    padding: 10px 0;
-    /* 设置较高的z-index值，确保导航栏在其他元素之上 */
-    z-index: 100;
-    /* 导航栏里的文字边缘留白40px，用于美观和布局调整 */
-    text-indent: 40px;
-    /* 设置导航栏的高度 */
-    height: 90px;
+    background-color: rgb(51, 51, 51);
+
+    height: 80px; /* 调整导航栏的高度 */
+
     
-   
+
 }
 
-  /* 导航栏内的元素 */
-  .navbar a {
-    color: rgb(236, 236, 236);
-    text-decoration: none;
+
+/* 左侧链接容器，使用flex布局，最小宽度为200px */
+.left-links{
+    flex:1 1 200px;
 }
 
-.container {
-    max-width: calc(100% - 120px); /* 减去两边的总内边距 */
-    margin: 0 auto; /* 自动居中 */
-    padding: 60px; /* 左右内边距 */
-}
-  
-  /* 示例内容 */
-  .content {
-    background-color: #f4f4f4;
-    padding: 20px;
-    }
 
-
-/* 定义body的基本布局和样式 */
-body {
-    /* 边距 */
-    margin: 50;
-    /* 指定一个友好的字体系列，覆盖浏览器默认字体 */
-    font-family: system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    /* 设置标准字体大小 */
-    font-size: 1.2rem;
-    /* 设置字体重量，400表示正常（标准）重量 */
-    font-weight: 400;
-    /* 定义行高，即行与行之间的垂直距离 */
-    line-height: 1.5;
-    /* 指定文本颜色 */
-    color: #212529;
-    /* 设置文本对齐方式为左对齐 */
-    text-align: left;
-    /* 设置背景颜色 */
-    background-color: #fff;
-}
-
-/* 为所有元素及其伪元素::before和::after设置盒模型为border-box，使得边框、内边距和外边距不增加元素的实际宽度和高度 */
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
-/* 定义html的基本样式和行为 */
-html {
-    touch-action: none;
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* 重置html中元素的默认touch-action行为 */
-html * {
-    touch-action: auto;
-}
-
-/* 为代码块元素pre定义字体样式，使用等宽字体 */
-pre {
-    font-family: monospace;
-}
-
-/* 为水平分隔线hr定义样式，包括盒模型、高度、溢出可视和边框样式 */
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-    unicode-bidi: isolate;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
-}
-
-/* 为按钮和类似按钮的input元素定义样式，使其外观表现为按钮 */
-[type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button;
-    appearance: button;
-}
-/* 保持按钮和选择框文本不自动转换大小写 */
-button, select {
-    text-transform: none;
-}
-/* 保持按钮和输入框的溢出可视 */
-button, input {
-    overflow: visible;
-}
-/* 为按钮、输入框、选择框和文本域设置默认样式，包括外边距、字体、字号和行高 */
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-/* 为button元素详细定义默认的布局和样式，包括外观、文本渲染、边距、内边距、边框等 */
-button {
-    appearance: auto;
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
+/* 导航链接样式，使用内联块状元素，居中对齐，无下划线，特定字体和颜色，并设置line-height以垂直居中文本 */
+.links {
     display: inline-block;
     text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-    margin: 0em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
+    padding: 16px;
+    color: rgb(236, 236, 236);
+    text-decoration: none;
+    font-size: 20px; 
+    font-family: "Microsoft YaHei";
+    line-height: 48px; 
+
 }
 
-/* 为链接定义样式，使得链接的默认光标为指针，并且去除默认的下划线 */
-a:-webkit-any-link {
-    cursor: pointer;
-    text-decoration: none;
+
+/* 链接鼠标悬停效果，下边框变为紫色实线 */
+.links:hover {
+    border-bottom: 2px solid rgb(213, 213, 213);
 }
+
+
+/* 当前选中的导航链接样式，下边框为紫色实线 */
+.selected{
+    border-bottom: 2px solid rgb(214, 214, 214);
+}
+
