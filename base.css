@@ -1,6 +1,7 @@
 /* 重置body的默认样式，移除外边距和内边距，但为了给导航栏预留空间，设置顶部外边距 */
 body{
     margin:0px;
+    margin-top: 80px; /* 调整导航栏顶部外边距，防止页面内容被导航栏遮住*/
     padding: 0px;
 }
 
@@ -40,14 +41,40 @@ nav{
 }
 
 
-/* 链接鼠标悬停效果，下边框变为紫色实线 */
+/* 链接鼠标悬停效果，下边框 */
 .links:hover {
-    border-bottom: 2px solid rgb(213, 213, 213);
+    border-bottom: 2px solid rgb(145, 145, 145);
 }
 
 
-/* 当前选中的导航链接样式，下边框为紫色实线 */
+/* 当前选中的导航链接样式，下边框 */
 .selected{
-    border-bottom: 2px solid rgb(214, 214, 214);
+    border-bottom: 2px solid rgb(145, 145, 145);
 }
 
+/*---------------------------- 待办事项页面---------------------------------- */
+.plan-text {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.container {
+    display: flex; /* 使用Flexbox布局 */
+    justify-content: space-between; /* 均匀分布剩余空间 */
+}
+
+.left-column,
+.right-column {
+    flex: 1; /* 等宽 */
+    padding: 20px;
+    box-sizing: border-box; /* 包含边框和内边距 */
+}
+
+.left-column {
+    background-color: #f0f0f0; /* 左侧背景颜色 */
+}
+
+.right-column {
+    background-color: #f0f0f0; /* 右侧背景颜色 */
+}
