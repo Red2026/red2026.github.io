@@ -62,6 +62,16 @@ nav{
     
 }
 
+.plan-text a {
+    color: darkturquoise;
+    /* 取消下划线 */
+    text-decoration: none;
+}
+
+.plan-text a:hover {
+    color: rgb(0, 0, 0);
+}
+
 .container {
     display: flex; /* 使用Flexbox布局 */
     justify-content: space-between; /* 均匀分布剩余空间 */
