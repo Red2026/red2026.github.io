@@ -31,7 +31,7 @@ nav {
 nav .brand a {
     font-size: 1.2em;
     font-weight: bold;
-    color: black;
+    color: rgb(255, 0, 0);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@ nav .brand a {
 
 /* 导航链接样式 */
 nav .links a {
-    color: black;
+    color: rgb(255, 0, 0);
     text-decoration: none;
     margin-left: 15px;
     padding: 10px 15px; /* 添加内边距以增加点击区域 */
@@ -60,14 +60,14 @@ nav .brand a:hover {
     background-color: white;
     list-style: none;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgb(255, 0, 0);
 }
 
 .dropdown-menu a {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 0, 0);
 }
 
 .dropdown-menu a:hover {
@@ -98,10 +98,6 @@ nav .brand a:hover {
         display: block;
     }
 }
-
-
-
-
 
 
 /*---------------------------- 待办事项页面---------------------------------- */
