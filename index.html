@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
-<!-- 设置网页背景为图片-->
-<style>
-    body {
-        background-image: url('./wallhaven-wyv7yx.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>    
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>red2026.github.io</title>
-    
-
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>  
+<body>
     <nav>
-        <div class="left-links">
-            <a class="links selected" href="index.html">red2026.github.io</a>
-           
+        <div class="brand">
+            <a href="index.html">red2026.github.io</a>
         </div>
-        <div class="right-links">
-            <a class="links" href="https://steamcommunity.com/profiles/76561199230499717/" target="_blank"> Steam</a>
-            <a class="links" href="https://x.com/Red40602025" target="_blank"> Twitter</a>
-            <a class="links" href="diary.html"> 事件</a>
-            <a class="links" href="plan.html"> 计划</a>
-            <a class="links" href="tools.html"> 工具</a>
+        <div class="links">
+            <a href="https://steamcommunity.com/profiles/76561199230499717/" target="_blank">Steam</a>
+            <a href="https://x.com/Red40602025" target="_blank">Twitter</a>
+            <a href="diary.html">事件</a>
+            <a href="plan.html">计划</a>
+            <a href="tools.html">工具</a>
         </div>
-    </nav> 
+        <button class="toggle-button">&#9776;</button>
+        <ul class="dropdown-menu">
+            <li><a href="https://steamcommunity.com/profiles/76561199230499717/" target="_blank">Steam</a></li>
+            <li><a href="https://x.com/Red40602025" target="_blank">Twitter</a></li>
+            <li><a href="diary.html">事件</a></li>
+            <li><a href="plan.html">计划</a></li>
+            <li><a href="tools.html">工具</a></li>
+        </ul>
+    </nav>
+
+    
+    <main style="padding-top: 60px;">
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

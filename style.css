@@ -1,82 +1,108 @@
-/* 重置body的默认样式，移除外边距和内边距，但为了给导航栏预留空间，设置顶部外边距 */
-body{
-    margin:0px;
-    margin-top: 80px; /* 调整导航栏顶部外边距，防止页面内容被导航栏遮住*/
-    padding: 0px;
+/* -------------------------------导航栏----------------------------------- */
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* 媒体查询 - 当屏幕宽度小于或等于600px时 */
-
-@media (max-width: 1000px) {
-    /* 设置body的背景大小以适应屏幕 */
-    body {
-        background-size: 100% 100vh;
-    }
-
-    /* 导航栏在垂直方向排列，并居中对齐文本 */
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* 左右链接采用列方向的弹性布局 */
-    .left-links, .right-links {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* 设置链接的边距和字体大小，以适应小屏幕 */
-    .left-links a, .right-links a {
-        margin: 0.5em 0;
-        font-size: 1.2em; /* 放大字体大小 */
-    }
+/* 页面整体样式 */
+body {
+    background-color: rgb(237, 237, 237);
+    font-family: Arial, sans-serif;
 }
 
-/* 导航栏样式，使用弹性布局，固定在页面顶部，全宽，深色背景，自动溢出 */
-nav{
-    display: flex;
+/* 导航栏样式 */
+nav {
     position: fixed;
-    top:0;
-    width: 100%;
-    background-color: rgb(51, 51, 51);
-
-    height: 80px; /* 调整导航栏的高度 */
-
-    
-
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
 }
 
-
-/* 左侧链接容器，使用flex布局，最小宽度为200px */
-.left-links{
-    flex:1 1 200px;
-}
-
-
-/* 导航链接样式，使用内联块状元素，居中对齐，无下划线，特定字体和颜色，并设置line-height以垂直居中文本 */
-.links {
-    display: inline-block;
-    text-align: center;
-    padding: 16px;
-    color: rgb(236, 236, 236);
+/* 品牌名称样式，现在包含首页链接 */
+nav .brand a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
     text-decoration: none;
-    font-size: 20px; 
-    font-family: "Microsoft YaHei";
-    line-height: 48px; 
+    display: flex;
+    align-items: center;
+}
 
+/* 导航链接样式 */
+nav .links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px 15px; /* 添加内边距以增加点击区域 */
+}
+
+/* 鼠标悬停效果为在导航栏底部显示下划线 */
+nav .links a:hover,
+nav .brand a:hover {
+    text-decoration: underline;
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 按钮样式 */
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* 媒体查询 - 当屏幕宽度小于800px时 */
+@media (max-width: 800px) {
+    nav .links {
+        display: none;
+    }
+
+    .toggle-button {
+        display: inline-block;
+    }
+
+    .toggle-button.active ~ .dropdown-menu {
+        display: block;
+    }
 }
 
 
-/* 链接鼠标悬停效果，下边框 */
-.links:hover {
-    border-bottom: 2px solid rgb(145, 145, 145);
-}
 
 
-/* 当前选中的导航链接样式，下边框 */
-.selected{
-    border-bottom: 2px solid rgb(145, 145, 145);
-}
+
 
 /*---------------------------- 待办事项页面---------------------------------- */
 .plan-text {
