@@ -5,6 +5,32 @@ body{
     padding: 0px;
 }
 
+/* 媒体查询 - 当屏幕宽度小于或等于600px时 */
+
+@media (max-width: 600px) {
+    /* 设置body的背景大小以适应屏幕 */
+    body {
+        background-size: 100% 100vh;
+    }
+
+    /* 导航栏在垂直方向排列，并居中对齐文本 */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 左右链接采用列方向的弹性布局 */
+    .left-links, .right-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 设置链接的边距和字体大小，以适应小屏幕 */
+    .left-links a, .right-links a {
+        margin: 0.5em 0;
+        font-size: 1.2em; /* 放大字体大小 */
+    }
+}
 
 /* 导航栏样式，使用弹性布局，固定在页面顶部，全宽，深色背景，自动溢出 */
 nav{
