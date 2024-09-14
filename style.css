@@ -1,119 +1,145 @@
-/* -------------------------------导航栏----------------------------------- */
-/* 基本重置 */
+/* ------------------------------- 全局样式 ----------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 页面整体样式 */
-body {
-    background-color: rgb(237, 237, 237);
+html, body {
+    height: 100%;
     font-family: Arial, sans-serif;
+    background-color: #ededed;
 }
 
-/* 导航栏样式 */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: white;
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------- 导航栏 ----------------------------------- */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
+    background-color: #92ac00;
+    padding: 35px 30px;
 }
 
-/* 品牌名称样式，现在包含首页链接 */
-nav .brand a {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: rgb(29, 29, 29);
+.navbar a {
+    color: #ffffff;
     text-decoration: none;
-    display: flex;
-    align-items: center;
+    margin: 0 20px;
+    font-size: 20px;
 }
 
-/* 导航链接样式 */
-nav .links a {
-    color: rgb(29, 29, 29);
+.navbar a:hover {
+    color: #480aff;
+}
+
+/* ------------------------------- 主内容区域 ----------------------------------- */
+.indexContent {
+    flex: 1;
+    padding: 30px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.image-container {
+    margin: 20px 0; /* 图片与其他内容的间距 */
+}
+
+.footer-link {
+    display: block; /* 使链接在新行显示 */
+    margin-top: 10px; /* 与图片的间距 */
+    font-size: 14px; /* 字体大小 */
+    color: #480aff; /* 链接颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+/* ------------------------------- 页脚 ----------------------------------- */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
     text-decoration: none;
-    margin-left: 15px;
-    padding: 10px 15px; /* 添加内边距以增加点击区域 */
+    margin: 0 10px;
 }
 
-/* 鼠标悬停效果为在导航栏底部显示下划线 */
-nav .links a:hover,
-nav .brand a:hover {
-    text-decoration: underline;
+footer a:hover {
+    color: #480aff;
 }
 
-/* 下拉菜单样式 */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: white;
-    list-style: none;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgb(163, 163, 163);
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(29, 29, 29);
-}
-
-.dropdown-menu a:hover {
-    background-color: #f1f1f1;
-}
-
-/* 按钮样式 */
-.toggle-button {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: black;
-    font-size: 1.2em;
-}
-
-/* 媒体查询 - 当屏幕宽度小于800px时 */
-@media (max-width: 800px) {
-    nav .links {
-        display: none;
+/* ------------------------------- 媒体查询 ----------------------------------- */
+@media (max-width: 600px) {
+    .navbar, footer {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .toggle-button {
-        display: inline-block;
-    }
-
-    .toggle-button.active ~ .dropdown-menu {
-        display: block;
+    .navbar a, footer a {
+        margin: 5px 0;
     }
 }
 
+.footer-link:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
 
-/*---------------------------- 待办事项页面---------------------------------- */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #480aff;
+}
+/* ------------------------------- 媒体查询 ----------------------------------- */
+@media (max-width: 600px) {
+    .content {
+        padding-left: 10px; /* 手机端左边距 */
+        padding-right: 10px; /* 手机端右边距 */
+    }
+
+    .navbar, footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a, footer a {
+        margin: 5px 0;
+    }
+}
+
+/* ---------------------------- 待办事项页面 ---------------------------------- */
 .plan-text {
     font-size: 24px;
     font-weight: bold;
-    font-family:'Courier New', Courier, monospace;
-    /* 行间距 */
-    line-height: 1.4;
-    
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4; /* 行间距 */
 }
 
 .plan-text a {
     color: darkturquoise;
-    /* 取消下划线 */
-    text-decoration: none;
+    text-decoration: none; /* 取消下划线 */
 }
 
 .plan-text a:hover {
@@ -121,7 +147,7 @@ nav .brand a:hover {
 }
 
 .container {
-    display: flex; /* 使用Flexbox布局 */
+    display: flex; /* 使用 Flexbox 布局 */
     justify-content: space-between; /* 均匀分布剩余空间 */
 }
 
@@ -140,5 +166,5 @@ nav .brand a:hover {
     background-color: #f0f0f0; /* 右侧背景颜色 */
 }
 
-
-/* diary页面 */
+/* ------------------------------- diary 页面 ----------------------------------- */
+/* 在这里添加 diary 页面相关样式 */
