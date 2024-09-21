@@ -60,18 +60,24 @@ body {
 
 
 
-.footer-link {
-    display: block; /* 使链接在新行显示 */
-    margin-top: 10px; /* 与图片的间距 */
-    font-size: 14px; /* 字体大小 */
-    color: #480aff; /* 链接颜色 */
+.footer-button {
+    display: block; /* 使按钮换行 */
+    
+    margin: 0 auto;
+    width: 100px;
+    padding: 10px 20px; /* 内边距 */
+    background-color: #676767; /* 按钮背景颜色 */
+    color: #ffffff; /* 字体颜色 */
     text-decoration: none; /* 去掉下划线 */
+    border-radius: 25px; /* 圆角 */
+    font-weight: bold; /* 加粗字体 */
+    font-family: 'Arial', sans-serif; /* 字体 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
 
-.footer-link:hover {
-    text-decoration: underline; /* 悬停时添加下划线 */
+.footer-button:hover {
+    background-color: #6b00d7; /* 悬停时背景颜色变化 */
 }
-
 /* ------------------------------- 页脚 ----------------------------------- */
 footer {
     background-color: #333;
