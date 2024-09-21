@@ -24,6 +24,7 @@ body {
     align-items: center;
     background-color: #92ac00;
     padding: 35px 30px;
+    overflow: auto;
 }
 
 .navbar a {
@@ -46,11 +47,18 @@ body {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
 }
 
 .image-container {
     margin: 20px 0; /* 图片与其他内容的间距 */
 }
+
+
 
 .footer-link {
     display: block; /* 使链接在新行显示 */
@@ -83,6 +91,64 @@ footer a:hover {
 
 /* ------------------------------- 媒体查询 ----------------------------------- */
 @media (max-width: 600px) {
+    .indexContent {
+        /* 宽度设置为手机屏幕的宽度 */
+        width: 100%;
+        /* 边距设置为0 */
+        padding: 0;
+        /* 完全贴合铺满手机尺寸 */
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: none;
+        
+    }
+
+    .indexContent img {
+        width: 100%;
+        /* 根据屏幕大小自动将图片宽度设置为屏幕宽度 */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }  
+
+    .navbar {
+        padding: 20px 15px; /* 减小导航栏的内边距 */
+    }
+
+    .indexContent {
+        /* 添加上边距以避免被导航栏遮挡 */
+        margin-top: 80px; /* 根据需要调整上边距 */
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-shadow: none;
+    }
+
+    .eye-container {
+        width: 90%; /* 确保在手机上适应 */
+        max-width: 600px;
+        height: auto; /* 自动高度 */
+        margin: 0 auto; /* 水平居中 */
+        display: grid;
+        grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+    }
+
+    .eye {
+        width: 40px; /* 调整眼睛大小 */
+        height: 40px;
+    }
+
+    .pupil {
+        width: 15px; /* 调整瞳孔大小 */
+        height: 15px;
+    }
+
     .navbar, footer {
         flex-direction: column;
         align-items: center;
@@ -111,22 +177,6 @@ footer a {
 
 footer a:hover {
     color: #480aff;
-}
-/* ------------------------------- 媒体查询 ----------------------------------- */
-@media (max-width: 600px) {
-    .content {
-        padding-left: 10px; /* 手机端左边距 */
-        padding-right: 10px; /* 手机端右边距 */
-    }
-
-    .navbar, footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a, footer a {
-        margin: 5px 0;
-    }
 }
 
 /* ---------------------------- 待办事项页面 ---------------------------------- */

@@ -18,6 +18,39 @@
             max-width: 100%; /* 响应式设计，确保图片不会超出容器 */
             height: auto; /* 保持图片的比例 */
         }
+
+        .eye-container {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            /* 创建9行9列的网格 */
+            display: grid;
+            grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+        }
+
+        .eye {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* 初始内阴影样式，添加模糊效果 */
+            box-shadow: 0 0 10px #000 inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.2s ease-out;
+        }
+
+        .pupil {
+            width: 25px;
+            height: 25px;
+            background-color: #000000;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.2s ease-out;
+        }
+
     </style>
 </head>
 <body>
@@ -26,14 +59,22 @@
             <a href="index.html">Red2026.github.io</a>
         </div>
         <div class="nav-links">
-            <a href="https://example.com/link1">链接1</a>
-            <a href="https://example.com/link2">链接2</a>
-            <a href="https://example.com/link3">链接3</a>
-            <a href="https://example.com/link4">链接4</a>
+            <a href="https://example.com/link1">#</a>
+            <a href="https://example.com/link2">#</a>
         </div>
     </div>
 
     <div class="indexContent">  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="eye-container"></div>
+        <br>
+        <a>网上复制粘贴的代码</a>
         <br>
         <br>
         <br>
@@ -63,9 +104,8 @@
         <br>
         <br>
         <br>
-        <div class="image-left-right">
-            <img src="./images/下载.jpeg" width="330" height="auto">
-            <img src="./images/Tips-for-Throwing-Darts-More-Accurately-.jpg" width="330" height="auto">
+        <div class="image-container">
+            <img src="./images/微信图片_20240921174043.png" width="650" height="auto">
         </div>
         <a href="./Pages/plan.html" class="footer-link">了解更多</a>
         <br>
@@ -86,4 +126,5 @@
         </a>
     </footer>
 </body>
+<script src="./script.js"></script>
 </html>
