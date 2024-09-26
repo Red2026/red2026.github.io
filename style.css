@@ -124,7 +124,14 @@ footer a:hover {
         overflow-x: hidden;
         overflow-y: auto;
         box-shadow: none;
+        min-height: 150vh;
+        /* 顶部边距 */
+        padding-top: 50px;
+        flex: 1;
         
+        box-shadow: none;
+        min-height: 150vh; /* 可能需要调整这个值 */
+        padding-top: 600px; /* 顶部边距，防止被导航栏遮挡 */
     }
 
     .content img {
@@ -139,58 +146,68 @@ footer a:hover {
     }  
 
     .navbar {
-        padding: 20px 15px; /* 减小导航栏的内边距 */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    .eye-container {
-        width: 90%; /* 确保在手机上适应 */
-        max-width: 500px;
-        height: auto; /* 自动高度 */
-        margin: 0 auto; /* 水平居中 */
-        display: grid;
-        grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+    .navbar a {
+        margin: 5px 0; /* 垂直间距 */
+        font-size: 18px;
     }
 
-    .eye {
-        width: 20px; /* 调整眼睛大小 */
-        height: 20px;
-    }
-
-    .pupil {
-        width: 4.1px; /* 调整瞳孔大小 */
-        height: 4.1px;
-    }
-
-    .navbar, footer {
+    footer {
         flex-direction: column;
         align-items: center;
     }
 
-    .navbar a, footer a {
+    footer a {
         margin: 5px 0;
     }
-}
 
-.footer-link:hover {
-    text-decoration: underline; /* 悬停时添加下划线 */
-}
+    .eye-container {
+        width: 90vw; /* 使用视口单位，使其占满屏幕宽度的90% */
+        height: 90vw; /* 保持正方形比例 */
+        max-width: 600px; /* 设置最大宽度，防止过大 */
+        max-height: 600px; /* 设置最大高度，防止过大 */
+        position: relative;
+        display: grid;
+        grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+    }
+    
+    .eye {
+        width: 10vw; /* 使用视口单位 */
+        height: 10vw; /* 使用视口单位 */
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0 10px #000 inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: box-shadow 0.2s ease-out;
+    }
+    
+    .pupil {
+        width: 4.1667vw; /* 计算得出的值，以保持与眼睛的比例 */
+        height: 4.1667vw; /* 计算得出的值，以保持与眼睛的比例 */
+        background-color: #000000;
+        border-radius: 50%;
+        position: relative;
+        transition: transform 0.2s ease-out;
+    }
 
-footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-}
+    .footer-link:hover {
+        text-decoration: underline; /* 悬停时添加下划线 */
+    }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
 
-footer a:hover {
-    color: #480aff;
-}
-
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+}    
 /* ---------------------------- 待办事项页面 ---------------------------------- */
 .plan-text {
     font-size: 24px;
