@@ -31,15 +31,16 @@ body {
     color: #ffffff;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 23px;
+    font-family: 'WEIRUANYAHEI';
 }
 
 .navbar a:hover {
-    color: #480aff;
+    color: #000000;
 }
 
 /* ------------------------------- 主内容区域 ----------------------------------- */
-.indexContent {
+.content {
     flex: 1;
     padding: 30px;
     width: 1200px;
@@ -52,6 +53,15 @@ body {
     flex-direction: column;
     align-items: center; /* 垂直居中 */
     justify-content: center; /* 水平居中 */
+
+  
+    flex: 1;
+    padding: 20px 20px 20px; /* 上边距留出导航栏的高度 */
+}
+
+main {
+    flex: 1;
+    padding: 20px 20px 20px; /* 上边距留出导航栏的高度 */
 }
 
 .image-container {
@@ -83,6 +93,7 @@ footer {
     background-color: #333;
     padding: 20px;
     text-align: center;
+    position: relative; 
 }
 
 footer a {
@@ -97,7 +108,13 @@ footer a:hover {
 
 /* ------------------------------- 媒体查询 ----------------------------------- */
 @media (max-width: 600px) {
-    .indexContent {
+
+    main {
+        flex: 1;
+        padding: 0px 0px 0px; /* 上边距留出导航栏的高度 */
+    }
+    
+    .content {
         /* 宽度设置为手机屏幕的宽度 */
         width: 100%;
         /* 边距设置为0 */
@@ -110,7 +127,7 @@ footer a:hover {
         
     }
 
-    .indexContent img {
+    .content img {
         width: 100%;
         /* 根据屏幕大小自动将图片宽度设置为屏幕宽度 */
         height: auto;
@@ -125,20 +142,9 @@ footer a:hover {
         padding: 20px 15px; /* 减小导航栏的内边距 */
     }
 
-    .indexContent {
-        /* 添加上边距以避免被导航栏遮挡 */
-        margin-top: 80px; /* 根据需要调整上边距 */
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
-        box-shadow: none;
-    }
-
     .eye-container {
         width: 90%; /* 确保在手机上适应 */
-        max-width: 600px;
+        max-width: 500px;
         height: auto; /* 自动高度 */
         margin: 0 auto; /* 水平居中 */
         display: grid;
@@ -146,13 +152,13 @@ footer a:hover {
     }
 
     .eye {
-        width: 40px; /* 调整眼睛大小 */
-        height: 40px;
+        width: 20px; /* 调整眼睛大小 */
+        height: 20px;
     }
 
     .pupil {
-        width: 15px; /* 调整瞳孔大小 */
-        height: 15px;
+        width: 4.1px; /* 调整瞳孔大小 */
+        height: 4.1px;
     }
 
     .navbar, footer {
