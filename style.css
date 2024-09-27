@@ -1,66 +1,60 @@
 /* ------------------------------- 全局样式 ----------------------------------- */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* 清除默认外边距 */
+    padding: 0; /* 清除默认内边距 */
+    box-sizing: border-box; /* 设置盒模型为border-box */
 }
 
 html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #ededed;
+    height: 100%; /* 使html和body的高度占满整个视口 */
+    font-family: Arial, sans-serif; /* 设置全局字体 */
+    background-color: #ededed; /* 设置背景颜色 */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* 使用Flex布局 */
+    flex-direction: column; /* 垂直方向排列子元素 */
 }
 
 /* ------------------------------- 导航栏 ----------------------------------- */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #92ac00;
-    padding: 35px 30px;
-    overflow: auto;
+    display: flex; /* 使用Flex布局 */
+    justify-content: space-between; /* 水平两端对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    background-color: #92ac00; /* 背景颜色 */
+    padding: 35px 30px; /* 内边距 */
+    overflow: auto; /* 自动处理溢出内容 */
 }
 
 .navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 23px;
-    font-family: 'WEIRUANYAHEI';
+    color: #ffffff; /* 文字颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+    margin: 0 20px; /* 外边距 */
+    font-size: 23px; /* 字体大小 */
+    font-family: 'WEIRUANYAHEI'; /* 特定字体 */
 }
 
 .navbar a:hover {
-    color: #000000;
+    color: #000000; /* 鼠标悬停时文字颜色变化 */
 }
 
 /* ------------------------------- 主内容区域 ----------------------------------- */
 .content {
-    flex: 1;
-    padding: 30px;
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
-
-  
-    flex: 1;
-    padding: 20px 20px 20px; /* 上边距留出导航栏的高度 */
+    flex: 1; /* 在flex容器中占据剩余空间 */
+    padding: 30px; /* 内边距 */
+    width: 74%; /* 宽度 */
+    margin: 0 auto; /* 居中显示 */
+    background-color: #ffffff; /* 背景颜色 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    text-align: center; /* 文本居中 */
+    display: flex; /* 使用Flex布局 */
+    flex-direction: column; /* 垂直方向排列子元素 */
+    align-items: center; /* 水平居中对齐 */
+    justify-content: center; /* 垂直居中对齐 */
 }
 
 main {
-    flex: 1;
+    flex: 1; /* 在flex容器中占据剩余空间 */
     padding: 20px 20px 20px; /* 上边距留出导航栏的高度 */
 }
 
@@ -68,103 +62,87 @@ main {
     margin: 20px 0; /* 图片与其他内容的间距 */
 }
 
-
-
 .footer-button {
-    display: block; /* 使按钮换行 */
-    
-    margin: 0 auto;
-    width: 100px;
+    display: block; /* 使按钮成为块级元素 */
+    margin: 0 auto; /* 水平居中 */
+    width: 100px; /* 宽度 */
     padding: 10px 20px; /* 内边距 */
-    background-color: #676767; /* 按钮背景颜色 */
-    color: #ffffff; /* 字体颜色 */
-    text-decoration: none; /* 去掉下划线 */
+    background-color: #676767; /* 背景颜色 */
+    color: #ffffff; /* 文字颜色 */
+    text-decoration: none; /* 移除链接下划线 */
     border-radius: 25px; /* 圆角 */
     font-weight: bold; /* 加粗字体 */
     font-family: 'Arial', sans-serif; /* 字体 */
-    transition: background-color 0.3s ease; /* 添加过渡效果 */
+    transition: background-color 0.3s ease; /* 背景颜色过渡效果 */
 }
 
 .footer-button:hover {
     background-color: #6b00d7; /* 悬停时背景颜色变化 */
 }
+
 /* ------------------------------- 页脚 ----------------------------------- */
 footer {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    position: relative; 
+    background-color: #333; /* 背景颜色 */
+    padding: 20px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    position: relative; /* 相对定位 */
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+    color: #fff; /* 文字颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+    margin: 0 10px; /* 外边距 */
 }
 
 footer a:hover {
-    color: #480aff;
+    color: #480aff; /* 悬停时文字颜色变化 */
 }
 
 /* ------------------------------- 媒体查询 ----------------------------------- */
-@media (max-width: 600px) {
-
+@media (max-width: 600px) { /* 当屏幕宽度小于等于600px时应用以下样式 */
     main {
         flex: 1;
         padding: 0px 0px 0px; /* 上边距留出导航栏的高度 */
-    }
-    
-    .content {
-        /* 宽度设置为手机屏幕的宽度 */
-        width: 100%;
-        /* 边距设置为0 */
-        padding: 0;
-        /* 完全贴合铺满手机尺寸 */
-        margin: 0;
         overflow-x: hidden;
-        overflow-y: auto;
-        box-shadow: none;
-        min-height: 150vh;
-        /* 顶部边距 */
-        padding-top: 50px;
-        flex: 1;
-        
-        box-shadow: none;
-        min-height: 150vh; /* 可能需要调整这个值 */
-        padding-top: 600px; /* 顶部边距，防止被导航栏遮挡 */
+    }
+
+    .content {
+        width: 100%; /* 宽度设置为手机屏幕的宽度 */
+        padding: 0; /* 边距设置为0 */
+        margin: 0; /* 外边距设置为0 */
     }
 
     .content img {
-        width: 100%;
-        /* 根据屏幕大小自动将图片宽度设置为屏幕宽度 */
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    }  
+        width: 100%; /* 根据屏幕大小自动将图片宽度设置为屏幕宽度 */
+        height: auto; /* 保持宽高比 */
+        display: block; /* 显示为块级元素 */
+        margin: 0 auto; /* 水平居中 */
+        max-width: 100%; /* 最大宽度 */
+        max-height: 100%; /* 最大高度 */
+        object-fit: contain; /* 图像填充方式 */
+    }
 
     .navbar {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column; /* 切换到垂直方向排列 */
+        align-items: center; /* 水平居中对齐 */
+        justify-content: center; /* 垂直居中对齐 */
     }
 
     .navbar a {
         margin: 5px 0; /* 垂直间距 */
-        font-size: 18px;
+        font-size: 18px; /* 字体大小 */
     }
 
     footer {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 切换到垂直方向排列 */
+        align-items: center; /* 水平居中对齐 */
     }
 
     footer a {
-        margin: 5px 0;
+        margin: 5px 0; /* 垂直间距 */
+        padding: 0 10px; /* 左右间距 */
     }
-
+    
     .eye-container {
         width: 90vw; /* 使用视口单位，使其占满屏幕宽度的90% */
         height: 90vw; /* 保持正方形比例 */
@@ -200,40 +178,34 @@ footer a:hover {
     .footer-link:hover {
         text-decoration: underline; /* 悬停时添加下划线 */
     }
+}
 
-
-    footer a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-}    
 /* ---------------------------- 待办事项页面 ---------------------------------- */
 .plan-text {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px; /* 字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    font-family: 'Courier New', Courier, monospace; /* 字体系列 */
     line-height: 1.4; /* 行间距 */
 }
 
 .plan-text a {
-    color: darkturquoise;
-    text-decoration: none; /* 取消下划线 */
+    color: darkturquoise; /* 文字颜色 */
+    text-decoration: none; /* 移除链接下划线 */
 }
 
 .plan-text a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /* 悬停时文字颜色变化 */
 }
 
 .container {
-    display: flex; /* 使用 Flexbox 布局 */
+    display: flex; /* 使用Flex布局 */
     justify-content: space-between; /* 均匀分布剩余空间 */
 }
 
 .left-column,
 .right-column {
     flex: 1; /* 等宽 */
-    padding: 20px;
+    padding: 20px; /* 内边距 */
     box-sizing: border-box; /* 包含边框和内边距 */
 }
 
@@ -244,6 +216,3 @@ footer a:hover {
 .right-column {
     background-color: #f0f0f0; /* 右侧背景颜色 */
 }
-
-/* ------------------------------- diary 页面 ----------------------------------- */
-/* 在这里添加 diary 页面相关样式 */

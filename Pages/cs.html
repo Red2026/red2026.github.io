@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../style.css">
-<html lang="en">
-<style>
-    /* 将video宽度设置为100%并居中 */
-    video {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .cstxt {
-        text-align: center;
-    }
-</style>    
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>counter-strike</title>
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d0d0d;
+        }
+
+        .video-container {
+            position: relative;
+            width: 90%; /* 你可以根据需要调整宽度 */     
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html">Red2026.github.io</a>
-        </div>
-        <div class="nav-links">
-            <a href="https://example.com/link1">#</a>
-            <a href="https://example.com/link2">#</a>
-        </div>
+    <!-- 视频容器 -->
+    <div class="video-container" >
+        <video src="../mp4/WeChat_20240727211415.mp4" controls></video>
     </div>
-    <main style="padding-top: 60px;">
-        <video src="WeChat_20240727211415.mp4" controls width="1000"></video>
-    </main>
-    <script src="script.js"></script>
 </body>
 </html>
