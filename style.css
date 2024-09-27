@@ -31,7 +31,7 @@ body {
     text-decoration: none; /* 移除链接下划线 */
     margin: 0 20px; /* 外边距 */
     font-size: 23px; /* 字体大小 */
-    font-family: 'WEIRUANYAHEI'; /* 特定字体 */
+    font-family: 'WEIRUANYAHEI', 'Microsoft YaHei', 'sans-serif', 'monospace'; /* 特定字体 */
 }
 
 .navbar a:hover {
