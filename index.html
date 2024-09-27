@@ -37,6 +37,12 @@
             position: relative;
             transition: transform 0.2s ease-out;
         }
+
+        @media (max-width: 600px) {
+            .desktop-only {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body> 
@@ -52,13 +58,16 @@
     </div>
     <!-- 主内容区域 -->
     <div class="content">  
-        <br><br><br><br><br><br>
+        <div class="desktop-only">
+            <br><br><br><br><br><br>
 
-        <div class="eye-container"></div><!-- 眼睛 -->
-        <br>
-        <a>*code copied from internet</a>
-        <br><br><br><br><br><br><br>
-
+            <div class="eye-container"></div><!-- 眼睛 -->
+            <br>
+            <a>*code copied from internet</a>
+        <br><br><br><br>
+        </div>
+        <br><br><br>
+          
         <div class="image-container">
             <img src="./images/taking-passion-to-profession-encouraging-hobbies.webp" width="650" height="auto"> 
         </div>
