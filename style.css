@@ -196,23 +196,3 @@ footer a:hover {
 .plan-text a:hover {
     color: rgb(0, 0, 0); /* 悬停时文字颜色变化 */
 }
-
-.container {
-    display: flex; /* 使用Flex布局 */
-    justify-content: space-between; /* 均匀分布剩余空间 */
-}
-
-.left-column,
-.right-column {
-    flex: 1; /* 等宽 */
-    padding: 20px; /* 内边距 */
-    box-sizing: border-box; /* 包含边框和内边距 */
-}
-
-.left-column {
-    background-color: #f0f0f0; /* 左侧背景颜色 */
-}
-
-.right-column {
-    background-color: #f0f0f0; /* 右侧背景颜色 */
-}
