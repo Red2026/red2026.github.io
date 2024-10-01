@@ -21,7 +21,8 @@ body {
     display: flex; /* 使用Flex布局 */
     justify-content: space-between; /* 水平两端对齐 */
     align-items: center; /* 垂直居中对齐 */
-    background-color: #92ac00; /* 背景颜色 */
+    /* background-color: #92ac00; 背景颜色 */
+    background-color:   #102852;
     padding: 35px 30px; /* 内边距 */
     overflow: auto; /* 自动处理溢出内容 */
 }
@@ -31,12 +32,24 @@ body {
     text-decoration: none; /* 移除链接下划线 */
     margin: 0 20px; /* 外边距 */
     font-size: 23px; /* 字体大小 */
-    font-family: 'WEIRUANYAHEI', 'Microsoft YaHei', 'sans-serif', 'monospace'; /* 特定字体 */
 }
 
-.navbar a:hover {
-    color: #000000; /* 鼠标悬停时文字颜色变化 */
+.nav-links a:hover {
+    /* 添加下划线 */
+    text-decoration: underline;
 }
+
+.logo-eng {
+    font-family: 'Consolas', 'Courier New';
+    font-size: 25px;
+}
+
+.logo-text {
+    font-family: 'SimSun', 'NSimSun', 'STSong', 'MingLiU', 'PMingLiU', serif;
+    color: #fff;
+    font-size: 30px;
+}
+
 
 /* ------------------------------- 主内容区域 ----------------------------------- */
 .content {
@@ -81,12 +94,6 @@ main {
 }
 
 /* ------------------------------- 页脚 ----------------------------------- */
-footer {
-    background-color: #333; /* 背景颜色 */
-    padding: 20px; /* 内边距 */
-    text-align: center; /* 文本居中 */
-    position: relative; /* 相对定位 */
-}
 
 footer a {
     color: #fff; /* 文字颜色 */
@@ -96,6 +103,41 @@ footer a {
 
 footer a:hover {
     color: #480aff; /* 悬停时文字颜色变化 */
+}
+
+footer {
+    background-color: #333; /* 背景颜色 */
+    display: flex;
+    justify-content: space-between; /* 使内容分布在两端 */
+    align-items: center; /* 垂直居中 */
+    padding: 20px; /* 根据需要调整间距 */
+    position: relative; /* 相对定位 */
+    text-align: center; /* 文本居中 */
+}
+
+.footer-content {
+    width: 74%;
+    margin-right: auto; /* 使文本内容偏左 */
+    padding-left: 5%; /* 左侧内边距，根据需要调整 */
+    font-size: large;
+}
+
+.footer-content p {
+    margin: 0; /* 移除默认的段落边距 */
+    font-size: 17px; /* 根据需要调整字体大小 */  
+    letter-spacing: 3px; /* 字之间间距 */
+    color: #ffffff; /* 文字颜色可以根据设计需求调整 */
+}
+
+.footer-icons {
+    margin-left: auto; /* 使图标内容偏右 */
+    padding-right: 30%; /* 右侧内边距，根据需要调整 */
+    display: flex;
+    gap: 5%; /* 图标之间的间隔 */
+}
+
+.footer-icons img {
+    vertical-align: middle; /* 确保图片垂直居中 */
 }
 
 /* ------------------------------- 媒体查询 ----------------------------------- */
@@ -122,11 +164,6 @@ footer a:hover {
         object-fit: contain; /* 图像填充方式 */
     }
 
-    .navbar {
-        flex-direction: column; /* 切换到垂直方向排列 */
-        align-items: center; /* 水平居中对齐 */
-        justify-content: center; /* 垂直居中对齐 */
-    }
 
     .navbar a {
         margin: 5px 0; /* 垂直间距 */
@@ -134,52 +171,31 @@ footer a:hover {
     }
 
     footer {
-        flex-direction: column; /* 切换到垂直方向排列 */
-        align-items: center; /* 水平居中对齐 */
+        padding: 10px; /* 减小内边距 */
+        height: 80px;
     }
 
-    footer a {
-        margin: 5px 0; /* 垂直间距 */
-        padding: 0 10px; /* 左右间距 */
-    }
-    
-    .eye-container {
-        width: 90vw; /* 使用视口单位，使其占满屏幕宽度的90% */
-        height: 90vw; /* 保持正方形比例 */
-        max-width: 600px; /* 设置最大宽度，防止过大 */
-        max-height: 600px; /* 设置最大高度，防止过大 */
-        position: relative;
-        display: grid;
-        grid-template: repeat(9, 1fr) / repeat(9, 1fr);
-    }
-    
-    .eye {
-        width: 10vw; /* 使用视口单位 */
-        height: 10vw; /* 使用视口单位 */
-        background-color: #fff;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        box-shadow: 0 0 10px #000 inset 0px 0px 10px rgba(0, 0, 0, 0.3);
-        transition: box-shadow 0.2s ease-out;
-    }
-    
-    .pupil {
-        width: 4.1667vw; /* 计算得出的值，以保持与眼睛的比例 */
-        height: 4.1667vw; /* 计算得出的值，以保持与眼睛的比例 */
-        background-color: #000000;
-        border-radius: 50%;
-        position: relative;
-        transition: transform 0.2s ease-out;
+    .footer-content {
+        width: 60%; /* 适当减小宽度 */
+        padding-left: 2.5%; /* 适当减小左侧内边距 */
+        font-size: medium; /* 调整字体大小 */
     }
 
-    .footer-link:hover {
-        text-decoration: underline; /* 悬停时添加下划线 */
+    .footer-content p {
+        font-size: 14px; /* 调整字体大小 */
+        letter-spacing: 2px; /* 调整字间距 */
+    }
+
+    .footer-icons {
+        padding-right: 15%; /* 适当减小右侧内边距 */
+        gap: 2.5%; /* 适当减小图标之间的间隔 */
+    }
+
+    .footer-icons img {
+        width: 25px; /* 适当减小图标的大小 */
+        height: 25px;
     }
 }
-
 /* ---------------------------- 待办事项页面 ---------------------------------- */
 .plan-text {
     font-size: 24px; /* 字体大小 */
