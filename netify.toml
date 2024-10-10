@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"  # 如果你需要运行构建命令
+  publish = "public"         # 构建输出目录
+
+[build.environment]
+  OPENAI_API_KEY = "sk-be5f4a8e6cab409098bea385f4421ad0"
